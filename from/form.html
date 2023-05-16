@@ -1,0 +1,96 @@
+<form>
+    <table border="1" cellspacing="0" cellpadding="15" style="margin: auto;">
+        <tr>
+            <td>Name :-</td>
+            <td> <input type="text" id="name" style="padding: 8px 10px;" /></td>
+        </tr>
+        <tr>
+            <td>Email :-</td>
+            <td><input type="email" id="email" style="padding: 8px 10px;" /></td>
+        </tr>
+        <tr>
+            <td>Phone No :-</td>
+            <td><input type="number" id="phone" style="padding: 8px 10px;" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input onclick="save()" type="button" value="submit"
+                    style="padding: 8px 10px; width: 100%;" /></td>
+        </tr>
+    </table>
+</form>
+
+<table border="1" id="Showdata" cellspacing="0" cellpadding="15" style="margin: auto;"></table>
+<script>
+    let record = [
+        {
+            name: "Ritu",
+            email: "ritu@gamil.com",
+            phone: 1234567890
+        },
+        {
+            name: "Druvisha",
+            email: "druvisha@gamil.com",
+            phone: 7698543209
+        }
+    ];
+    let viwedata = () => {
+        let tbl = "";
+        tbl += `
+                <tr>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>PHONE NO</th>
+                </tr>
+            `
+        record.map((val) => {
+            return (
+                tbl += `
+                        <tr>
+                            <td>${val.name}</td>
+                            <td>${val.email}</td>
+                            <td>${val.phone}</td>
+                        </tr>
+                    `
+            )
+        });
+        document.getElementById('Showdata').innerHTML = tbl;
+    }
+    viwedata();
+    let save = () => {
+        let n = document.getElementById('name').value;
+        let e = document.getElementById('email').value;
+        let p = document.getElementById('phone').value;
+        let check = 0;
+
+        for (let i in record) {
+            if (record[i].phone == p) {
+                check = 1;
+            }
+        }
+        if (check == 1) {
+            alert("user dubllicat")
+        }
+        else {
+            let obj = {
+                name: n,
+                email: e,
+                phone: p
+            }
+            record.push(obj);
+            alert("Record successfully add");
+            viwedata();
+        }
+        document.getElementById('name').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('phone').value = "";
+
+
+
+
+    }
+
+
+
+
+
+</script>

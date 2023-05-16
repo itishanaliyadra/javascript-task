@@ -1,0 +1,17 @@
+<!-- 2. write a javascript program use try and catch user input 0 show err user not divided by zero value. -->
+<script type="text/javascript">
+    let a = parseInt(prompt("Enter a number A :-"));
+    let b = parseInt(prompt("Enter a number B :-"));
+    try {
+        if(b!= 0){
+            document.write(`${a}/ ${b} = ${a/b}`);
+        }
+        else{
+            throw " B is not valid ";
+        }
+    } catch (error) {
+        document.write(error);
+    }
+
+
+</script>

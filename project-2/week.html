@@ -1,0 +1,34 @@
+<!-- 8. Write a JavaScript program to find week day from first letter of it using if else if.
+Ex. User Input: M
+Output: Monday -->
+
+<h2 id="sun"></h2>
+<script type="text/javascript">
+    var day = prompt("Enter a day");
+
+    if(day == "m"){
+        document.getElementById('sun') .innerHTML ="Monday";
+    }
+    else if( day == "t"){
+        document.getElementById('sun') .innerHTML ="Tresday";
+    }
+    else if ( day == "w"){
+        document.getElementById('sun') .innerHTML ="Wendnesday";
+    }
+    else if ( day == "T"){
+        document.getElementById('sun') .innerHTML ="Thursday";
+    }
+    else if ( day == "f"){
+        document.getElementById('sun') .innerHTML ="Friday";
+    }
+    else if ( day == "s"){
+        document.getElementById('sun') .innerHTML ="Saturday";
+    }
+    else if(day == "S"){
+        document.getElementById('sun') .innerHTML ="Sanday";
+    }
+    else{
+        document.getElementById('sun') .innerHTML ="not vaild";
+    }
+
+</script>

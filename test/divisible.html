@@ -1,0 +1,22 @@
+<!-- 3. Write a JavaScript program to find  if a number is divisible-by 5 and 15 using return with no perameter function. -->
+<script type="text/javascript">
+
+    function divisible() {
+        var a = parseInt(prompt("Enter a no ="));
+        if (a % 5 == 0 && a % 15 == 0) {
+            return 1;
+        }
+        else {
+            return 2;
+        }
+    }
+    var ans = divisible();
+    if (ans == 1) {
+        document.write("<h1>velid</h1>");
+    }
+    else {
+        document.write("<h1>Note velid</h1>");
+    }
+
+
+</script>

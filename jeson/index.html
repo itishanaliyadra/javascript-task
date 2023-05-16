@@ -1,0 +1,31 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<table id="show" border="1" cellspacing="0" cellpadding="10"></table>
+
+<script type="text/javascript">
+    $.ajax({
+        type: "GET",
+        url: "https://jsonplaceholder.typicode.com/albums",
+        success: function (res) {
+            let tbl = `
+            <tr>
+                <td>USER ID</td>
+                <td>ID</td>
+                <td>TITLE</td>
+            </tr>
+            `
+            res.map((val)=>{
+                return tbl+=`
+                <tr>
+                    <td>${val.userId}</td>
+                    <td>${val.id}</td>
+                    <td>${val.title}</td>
+                </tr>
+                `
+            })
+           
+
+
+            document.getElementById('show').innerHTML = tbl;
+        }
+    })
+</script>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .black {
+        width: 70px;
+        height: 70px;
+        background-color: rgba(101, 59, 59, 0.316);
+    }
+    .white {
+        width: 70px;
+        height: 70px;
+        background-color: rgba(10, 71, 89, 0.286);
+    }
+</style>
+
+<body>
+    <table id="parent" border="1" cellspacing="0" cellpadding="10"></table>
+
+    <script type="text/javascript">
+        let row = parseInt(prompt("Enter row"));
+        let colum = parseInt(prompt("Enter colum"));
+        for (let i = 0; i < colum; i++) {
+            let tr = document.createElement('tr');
+
+            if (i % 2 == 1) {
+                for (let j = 0; j < row; j++) {
+                    let td = document.createElement('td');
+                    tr.appendChild(td)
+                    if (j % 2 == 1) {
+                        td.setAttribute('class', 'black');
+                    }
+                    else {
+                        td.setAttribute('class', 'white');
+                    }
+                }
+            }
+            else {
+                for (let j = 0; j < row; j++) {
+                    let td = document.createElement('td');
+                    tr.appendChild(td)
+                    if (j % 2 == 0) {
+                        td.setAttribute('class', 'black');
+                    }
+                    else {
+                        td.setAttribute('class', 'white');
+                    }
+                }
+            }
+
+
+
+
+
+            document.getElementById('parent').appendChild(tr);
+        }
+
+
+
+    </script>
+</body>
+
+</html>

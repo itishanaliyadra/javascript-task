@@ -1,0 +1,18 @@
+<h2 id="sun"></h2>
+<!-- 3.Write a JavaScript program to check year is leap year or not leap year. -->
+
+<script type="text/javascript">
+
+    var year = parseInt(prompt("Enter no ="));
+    if (year.length >= 4 && year.length <= 3) {
+        document.getElementById('sun').innerHTML = `input 4 valid `;
+
+    }
+    else if (year % 4 == 0 && year % 400 == 0 || year % 100 != 0) {
+        document.getElementById('sun').innerHTML = `This year is leap year ${year}`;
+    }
+    else {
+        document.getElementById('sun').innerHTML = `This year is note leap year ${year}`;
+    }
+
+</script>

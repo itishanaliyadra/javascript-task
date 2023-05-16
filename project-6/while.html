@@ -1,0 +1,17 @@
+<!-- 3. write a javascript program to use class and object print multiplication table of any number using do while loop. -->
+<script type="text/javascript">
+    class Table {
+        number() {
+            let n = parseInt(prompt("Entra n number ="));
+            let i = 1;
+
+            do {
+                let ans = i * n;
+                document.write("<h1>" + n + "*" + i + "=" + ans + "</h1>");
+                i++;
+            } while (i <= 10);
+        }
+    }
+    let ntable = new Table;
+    ntable.number();
+</script>

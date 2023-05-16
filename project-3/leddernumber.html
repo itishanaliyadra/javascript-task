@@ -1,0 +1,36 @@
+<!-- 4.Write a JavaScript program to find which number is greter in 4 numbers using ledder if else. (using no return with parameter function) -->
+<script type="text/javascript">
+    number(10, 80, 90, 50);
+    function number(a, b, c, d) {
+        if (a > b) {
+            if (a > c) {
+                if (a > d) {
+                    document.write("<h1>A is big</h1>");
+                }
+                else {
+                    document.write("<h1>D is big</h1>");
+                }
+            }
+        }
+        else {
+            if (b > c) {
+                if (b > d) {
+                    document.write("<h1>B is big</h1>");
+                }
+                else {
+                    document.write("<h1>D is big</h1>");
+                }
+            }
+            else {
+                if (c > b) {
+                    if (c > d) {
+                        document.write("<h1>C is big</h1>");
+                    }
+                    else {
+                        document.write("<h1>D is big</h1>");
+                    }
+                }
+            }
+        }
+    }
+</script>

@@ -1,0 +1,53 @@
+<table id="showdata" border="1" cellspacing="0" cellpadding="20"></table>
+
+<script type="text/javascript">
+    class Demo {
+
+        constructor(id, name, phone) {
+            this.id = id;
+            this.name = name;
+            this.phone = phone;
+        }
+
+        details() {
+
+            let tbl = ""
+            
+            tbl += `
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Phone</td>
+            </tr>
+            `
+
+
+            let record =[ {
+                id1: this.id,
+                name1: this.name,
+                phone1: this.phone,
+            }
+        ];
+
+            console.log(record)
+
+
+            for (let i in record) {
+                tbl += `
+            <tr>
+            <td>${record[i].id1}</td>
+            <td>${record[i].name1}</td>
+            <td>${record[i].phone1}</td>
+            </tr>
+            `
+
+            }
+
+            document.getElementById('showdata').innerHTML = tbl;
+        }
+    }
+    let obj = new Demo(111, "Rinku", "123456",);
+    obj.details();
+    let obj1 = new Demo(111, "Rinku", "123456",);
+    obj1.details();
+</script>

@@ -1,0 +1,146 @@
+<!-- onchlick -->
+<h1 id="ans"></h1>
+<button type="button" onclick="save()" style="padding: 10px 15px;">click</button>
+<!-- <script type="text/javascript">
+   console.log("done");
+
+    let cnt=0;
+    let save = ()=>{
+        // alert("sun")
+        cnt++;
+        document.getElementById('ans').innerHTML=cnt;
+    }
+</script> -->
+
+<!-- Onmouseover -->
+<button type="button" onmouseover="menu()" style="padding: 10px 15px; ">click</button>
+<!-- <script type="text/javascript">
+    let cnt= 0;
+    let menu = ()=>{
+        cnt++;
+        document.getElementById('ans').innerHTML=cnt;
+        
+    }
+</script> -->
+
+
+<!-- onmouseout -->
+<button type="button" onmouseout="sun()" style="padding: 10px 15px; ">click</button>
+<!-- <script type="text/javascript">
+    let cnt=0;
+    let sun = ()=>{
+        cnt++;
+        document.getElementById('ans').innerHTML=cnt;   
+    }
+</script> -->
+
+<!-- Onmousedown -->
+<button type="button" onmousedown="lil()" style="padding: 10px 15px; ">down</button>
+<!-- <script type="text/javascript">
+    let cnt=0;
+ 
+ let lil =()=>{
+    cnt++;
+    document.getElementById('ans').innerHTML=cnt;
+ }
+</script> -->
+
+
+<!-- On mouseup -->
+<button type="button" onmouseup="nin()" style="padding: 10px 15px; ">mouseup</button>
+<!-- <script type="text/javascript">
+    console.log("done");
+    let cnt =0;
+    let nin=()=>{
+        cnt++;
+        document.getElementById('ans').innerHTML=cnt;
+    }
+</script> -->
+
+
+
+
+<!-- Onmouse move -->
+<button type="button" onmousemove="tyr()" style="padding: 10px 15px; ">mousemove</button>
+<!-- <script type="text/javascript">
+    let cnt=0;
+    let tyr =() =>{
+        cnt++;
+        document.getElementById('ans').innerHTML=cnt;
+    }
+</script> -->
+
+
+<!-- key event -->
+<!-- Onkeydown-->
+<button type="button" Onkeydown="demo()" style="padding: 10px 15px; ">key</button>
+<!-- <script type="text/javascript">
+    let cnt=0;
+    let demo =() =>{
+        cnt++;
+        document.getElementById('ans').innerHTML=cnt;
+    }
+</script> -->
+
+
+
+<!-- Onkeyup-->
+<button type="button" onkeyup="sub()" style="padding: 10px 15px; ">key up</button>
+<!-- <script type="text/javascript">
+    let sub =() =>{
+       alert("hello");
+    }
+</script>  -->
+
+
+
+<!-- Form events -->
+
+<!-- Onfocus-->
+Name :-<input type="text" id="name" onfocus="box()">
+<!-- <script type="text/javascript">
+    let box =() =>{
+      document.getElementById('name').style.background="yellow";
+    }
+</script> -->
+
+
+<!-- formsubmit -->
+<form onsubmit="tel()">
+    EName :-<input type="text" id="name" onfocus="box()">
+    <input type="submit" value="submit">
+</form>
+<!-- <script type="text/javascript">
+    let tel =() =>{
+      alert("form successfully submited");
+    }
+</script> -->
+
+
+<!-- onblur-->
+FRIST NAME :-<input type="text" id="fname" onblur="ret()">
+<script type="text/javascript">
+    let ret = () => {
+         let name = document.getElementById('name');
+        name.value = name.value.toLowerCase();
+    }
+</script>
+
+<!--  Onfocus  -->
+<select  id="city" onchange="date()">
+    <!-- <option>---SELECT CITY --</option>
+    <option>UK</option>
+    <option>USA</option>
+    <option>CANADA</option>
+    <option>RASHIYA</option>
+    <option>ABORD</option>
+    <option>DUBAI</option>
+</select>
+
+<h4 id="tb" style="font-size: 40px;"></h4>
+<script type="text/javascript">
+ let date=()=>{
+    let city = document.getElementById('city').value;
+    document.getElementById('tb').innerHTML="select city :-"+city;
+ }
+</script> -->

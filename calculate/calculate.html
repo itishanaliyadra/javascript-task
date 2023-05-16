@@ -1,0 +1,45 @@
+
+    <form name="form">
+        <table border="1" style="padding: 20px; margin: auto; " cellspacing="0">
+            <td><input name="ans" type="text" style="padding: 8px 10px; border: 2px solid; font-size: 25px;"></td>
+            <table border="1" cellspacing="0" cellpadding="13" style="border: 0.5px solid; margin: auto;">
+                <tr>
+                    <td><button style="padding:10px 15px; font-size: 20px;" type="button" onclick="form.ans.value = null">CE</button></td>
+                    <td><button style="padding:10px 15px; font-size: 20px;" type="button" id="name1" onclick="form.ans.value+='%'">%</button></td>
+                    <td><button style="padding:10px 15px; font-size: 20px;" type="button" id="name2" onclick="form.ans.value-='-'">[x]</button>
+                    </td>
+                    <td><button style="padding:10px 15px; font-size: 20px;" type="button" name="name3"
+                            onclick="form.ans.value = eval(form.ans.value)">=</button></td>
+                </tr>
+                <tr>
+                    <td><button style="padding:10px 15px; font-size: 20px;" type="button" onclick="form.ans.value+='1'">1</button></td>
+                    <td><button style="padding:10px 15px; font-size: 20px;" type="button" onclick="form.ans.value+='2'">2</button></td>
+                    <td><button style="padding:10px 15px; font-size: 20px;" type="button" onclick="form.ans.value+='3'">3</button></td>
+                    <td><button style="padding:10px 15px; font-size: 20px;" type="button" onclick="form.ans.value+='+'">+</button></td>
+                </tr>
+                <tr>
+                    <td><button style="padding:10px 15px;font-size: 20px;" type="button" onclick="form.ans.value+='4'">4</button></td>
+                    <td><button style="padding:10px 15px;font-size: 20px;" type="button" onclick="form.ans.value+='5'">5</button></td>
+                    <td><button style="padding:10px 15px;font-size: 20px;" type="button" onclick="form.ans.value+='6'">6</button></td>
+                    <td><button style="padding:10px 15px;font-size: 20px;" type="button" onclick="form.ans.value+='-'">-</button></td>
+                </tr>
+                <tr>
+                    <td><button style="padding:10px 15px;font-size: 20px;" type="button" onclick="form.ans.value+='7'">7</button></td>
+                    <td><button style="padding:10px 15px;font-size: 20px;" type="button" onclick="form.ans.value+='8'">8</button></td>
+                    <td><button style="padding:10px 15px;font-size: 20px;" type="button" onclick="form.ans.value+='9'">9</button></td>
+                    <td><button style="padding:10px 15px;font-size: 20px;" type="button" onclick="form.ans.value+='*'">*</button></td>
+                </tr>
+                <tr>
+                    <td><button style="padding:10px 15px;font-size: 20px;" type="button" onclick="form.ans.value+='0'">0</button></td>
+                    <td><button style="padding:10px 15px;font-size: 20px;" type="button" onclick="form.ans.value+='00'">00</button></td>
+                    <td><button style="padding:10px 15px;font-size: 20px;" type="button" onclick="form.ans.value+='.'">.</button></td>
+                    <td><button style="padding:10px 15px;font-size: 20px;" type="button" onclick="form.ans.value+='/'">/</button></td>
+                </tr>
+            </table>
+        </table>
+    </form>
+    <script type="text/javascript">
+        let save = () =>{
+
+        }
+    </script>

@@ -1,0 +1,89 @@
+<table border="1" cellspacing="0" cellpadding="15" style="margin: auto;">
+    <tr>
+        <td>NAME :-</td>
+        <td><input type="text" id="name" style="padding: 8px 10px;" /></td>
+    </tr>
+    <tr>
+        <td>EMAIL :-</td>
+        <td><input type="email" id="email" style="padding: 8px 10px;" /></td>
+    </tr>
+    <tr>
+        <td>PHONE NO. :-</td>
+        <td><input type="number" id="phone" style="padding: 8px 10px;" /></td>
+    </tr>
+    <tr>
+        <td colspan="2"><input onclick="save()" type="button" value="submit" style="width: 100%; padding: 8px 10px;" />
+        </td>
+    </tr>
+</table>
+<table border="1" id="show" cellspacing="0" cellpadding="15" style="margin:10px auto;"></table>
+<script type="text/javascript">
+    class Demo {
+        form() {
+            let obj = [
+                {
+                    name: "gita",
+                    email: "gita@gmail.com",
+                    phone: 12345678
+                },
+                {
+                    name: "shita",
+                    email: "shita@gmail.com",
+                    phone: 12345678
+                },
+            ];
+            let viewdata = () => {
+                let tbl = "";
+                tbl += `
+                    <tr>
+                        <th>NAME</th>
+                        <th>EMAIL</th>
+                        <th>PHONE NO</th>
+                    </tr>
+                `
+                obj.map((val) => {
+                    return tbl += `
+                            <tr>
+                                <td>${val.name}</td>
+                                <td>${val.email}</td>
+                                <td>${val.phone}</td>
+                            </tr>
+                        `
+                });
+                document.getElementById('show').innerHTML = tbl;
+            }
+            viewdata();
+           
+
+        }
+
+
+
+    }
+
+
+
+    let fobj = new Demo;
+    fobj.form();
+    let save = () => {
+                let n = document.getElementById('name').value;
+                let e = document.getElementById('email').value;
+                let p = document.getElementById('phone').value;
+
+                let recod = {
+                    name:n,
+                    email:e,
+                    phone:p
+                }
+                obj.push(recod);
+                alert("record is succesfully add");
+                document.getElementById('name').value="";
+                document.getElementById('email').value="";
+                document.getElementById('phone').value="";
+                viewdata();
+            }
+
+
+
+
+</script>

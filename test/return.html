@@ -1,0 +1,61 @@
+<!-- 4. Write a Javascript program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following using return with perameter function.
+
+Percentage >= 90% : Grade A
+Percentage >= 80% : Grade B
+Percentage >= 70% : Grade C
+Percentage >= 60% : Grade D 
+Percentage >= 50% : Grade E
+Percentage >= 40% : Grade F -->
+<h2 id="sun"></h2>
+<script type="text/javascript">
+    function demo1(no1) {
+        return no1;
+
+    }
+    function demo2(no2) {
+        return no2;
+    }
+    function demo3(no3) {
+        return no3;
+    }
+    function demo4(no4) {
+        return no4;
+    }
+    function demo5(no5) {
+        return no5;
+    }
+
+
+    var physics = parseInt(prompt("Enter a marks physics  ="));
+    var chemistry = parseInt(prompt("Enter a marks Chemistry ="));
+    var biology = parseInt(prompt("Enter a marks biology ="));
+    var mathematics = parseInt(prompt("Enter a marks Mathematics ="));
+    var computer = parseInt(prompt("Enter a marks Computer ="));
+
+
+    var p = demo1(physics);
+    var c = demo2(chemistry);
+    var b = demo3(biology);
+    var m = demo4(mathematics);
+    var com = demo5(computer);
+    var totel = p + c + b + m + com;
+    var percentage = totel / 5;
+    if (percentage >= 90){
+        document.getElementById('sun').innerHTML="Grade A";
+    }
+    else if(percentage >= 80){
+        document.getElementById('sun').innerHTML="Grade B";
+    }
+    else if(percentage >= 70){
+        document.getElementById('sun').innerHTML="Grade C";
+    }
+    else if(percentage >= 60){
+        document.getElementById('sun').innerHTML="Grade D";
+    }
+    else if(percentage >= 50){
+        document.getElementById('sun').innerHTML="Grade E";
+    }
+    else{
+        document.getElementById('sun').innerHTML="Grade F"; 
+    }
+</script>

@@ -1,0 +1,55 @@
+<table id="show" border="1" cellspacing="0" cellpadding="20"></table>
+
+<script type="text/javascript">
+    console.log("done");
+    class Demo {
+        sum() {
+            let a = 10, b = 5;
+            let c = a + b;
+            // document.write("<h1>ANS = "+c+"</h1>");
+        }
+    }
+    let obj = new Demo;
+    obj.sum();
+
+
+
+
+    class Form {
+        details() {
+            let data = [
+                {
+                    name: "ritu",
+                    email: "ritu@gmail.com",
+                    phone: 123456789
+                },
+                {
+                    name: "kajal",
+                    email: "kajal@gmail.com",
+                    phone: 123456789
+                },
+            ];
+            console.log(data);
+            let tbl = "";
+            tbl += `
+            <tr>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>PHONE</th>
+                </tr>
+            `
+            data.map((val) => {
+                return tbl += `
+                <tr>
+                    <td>${val.name}</td>
+                    <td>${val.email}</td>
+                    <td>${val.phone}</td>
+                </tr>
+     `})
+     
+            document.getElementById('show').innerHTML = tbl
+        }
+    }
+    let detobj = new Form;
+    detobj.details();
+</script>

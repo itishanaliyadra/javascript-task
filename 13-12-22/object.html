@@ -1,0 +1,103 @@
+<table cellspacing="0" border="1" cellpadding="15" id="show" style="margin:20px auto; border: 1px solid;"></table>
+
+
+<script type="text/javascript">
+    console.log("done");
+    let record = [{
+        name: "itisha ",
+        grid: 1449,
+        email: "itisha@gmail.com",
+        phone: 1234562456,
+        city:"surat"
+    }, {
+        name: "isha ",
+        grid: 19849,
+        email: "isha@gmail.com",
+        phone: 123456245698,
+        city:"surat"
+    },
+    {
+        name: "itisha ",
+        grid: 1449,
+        email: "itisha@gmail.com",
+        phone: 1234562456,
+        city:"surat"
+    },
+    {
+        name: "itisha ",
+        grid: 1449,
+        email: "itisha@gmail.com",
+        phone: 1234562456,
+        city:"surat"
+    },
+    {
+        name: "Rina ",
+        grid: 1229,
+        email: "rina@gmail.com",
+        phone: 34562456,
+        city:"surat"
+    },
+    {
+        name: "Shita ",
+        grid: 1559,
+        email: "shita@gmail.com",
+        phone: 12343526,
+        city:"surat"
+    } ,
+    {
+        name: "Nita ",
+        grid: 1669,
+        email: "nita@gmail.com",
+        phone: 12398726,
+        city:"surat"
+    },
+    {
+        name: "Gita ",
+        grid: 1649,
+        email: "gita@gmail.com",
+        phone: 123764626,
+        city:"surat"
+    },
+    {
+        name: "Eva ",
+        grid: 1489,
+        email: "eva@gmail.com",
+        phone: 123985626,
+        city:"surat"
+    }
+    ]
+    console.log(record);
+
+    for (let i = 0; i < record.length; i++) {
+        for (let j = i + 1; j < record.length; j++) {
+            if (record[i].grid == record[j].grid) {
+                record[j] = 0;
+            }
+        }
+    }
+   let newarr = record.filter((val)=>{
+        return val != 0;
+    })    
+    let tbl = "";
+    tbl += `
+        <tr>
+            <th>GRID</th>
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>PHONE NO</th>
+            <th>CITY</th>
+            </tr>
+    `;
+    let ans = newarr.map((val) => {
+        tbl += `
+        <tr>
+            <td>${val.grid}</td>
+            <td>${val.name}</td>
+            <td>${val.email}</td>
+            <td>${val.phone}</td>
+            <td>${val.city}</td>
+        </tr>
+        `
+    });
+    document.getElementById('show').innerHTML = tbl;
+</script>

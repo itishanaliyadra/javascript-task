@@ -1,0 +1,29 @@
+<!-- 15.Write javascript program print out Fibonacci series. (0,1,1,2,3,5,8…) -->
+<script type="text/javascript">
+var i=1;
+var no= parseInt(prompt("Enter a no = "));
+var no1=0 , no2=1;
+while (i<=no) {
+    document.write("<h1>"+no1+"</h1>");
+    var no3= no1+no2;
+    no1=no2;
+    no2=no3;
+    i++
+    
+}
+// do {
+//     document.write("<h1>"+no1+"</h1>");
+//     var no3= no1+no2;
+//     no1=no2;
+//     no2=no3;
+//     i++  
+// } while (i<=no);
+
+
+// for(i; i<=no; i++){
+//     document.write("<h1>"+no1+"</h1>");
+//     var no3= no1+no2;
+//     no1=no2;
+//     no2=no3;
+// }
+</script>

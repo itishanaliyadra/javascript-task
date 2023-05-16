@@ -1,0 +1,34 @@
+<!-- 9. Write a JavaScript program to find max of 4 number using nested if. -->
+<h2 id="sun"></h2>
+<script type="text/javascript">
+    var a = 1, b = 2, c = 3, d = 4;
+    if (a > b) {
+        if (a > c) {
+            if (a > d) {
+                document.getElementById('sun').innerHTML = "A is big";
+            }
+            else {
+                document.getElementById('sun').innerHTML = "D is big        ";
+            }
+        }
+    }
+    else {
+        if (b > c) {
+            if (b > d) {
+                document.getElementById('sun').innerHTML = "B is big";
+            }
+            else {
+                document.getElementById('sun').innerHTML = "D is big";
+            }
+        }
+        if (c > b) {
+            if (c > d) {
+                document.getElementById('sun').innerHTML = "C is big";
+            }
+            else {
+                document.getElementById('sun').innerHTML = "D is big";
+            }
+        }
+    }
+
+</script>

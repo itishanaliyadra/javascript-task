@@ -1,0 +1,48 @@
+<!-- 2 write a javascript program to below data print html table using constructor method. -->
+<table border="1" id="showdata" cellspacing="0" cellpadding="20  " style="margin: auto;"></table>
+<script type="text/javascript">
+    class Form {
+        constructor() {
+            let data = [
+                {
+                    name: "jay",
+                    email: "jay@gmail.com",
+                    phone: "9876543",
+                },
+                {
+                    name: "ajay",
+                    email: "ajay@gmail.com",
+                    phone: "3456789",
+                },
+                {
+                    name: "vijay",
+                    email: "vijay@gmail.com",
+                    phone: "09876238",
+                },
+                {
+                    name: "ashish",
+                    email: "ashish@gmail.com",
+                    phone: "123456789",
+                },
+            ];
+            let tbl =`
+            <tr>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>PHONE NO </th>
+            </tr>
+            `
+            data.map((val)=>{
+                return tbl += `
+                <tr>
+                    <td>${val.name}</td>
+                    <td>${val.email}</td>
+                    <td>${val.phone}</td>
+                </tr>
+                `
+            })
+            document.getElementById('showdata').innerHTML=tbl;
+        }
+    }
+    let newform= new Form ; 
+</script>

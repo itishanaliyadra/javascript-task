@@ -1,0 +1,19 @@
+<!-- 1. write a javascript program to use try and catch three number chek between wich number is big. -->
+<script type="text/javascript">
+let a = parseInt(prompt("Enter a number A :-"));
+let b = parseInt(prompt("Enter a number B :-"));
+let c = parseInt(prompt("Enter a number C :-"));
+try {
+    if(a>b && a>c){
+        alert("A is big");
+    }
+    else if(b>a && b>c){
+        alert("B is big");
+    }
+    else{
+        throw " C is big";
+    }
+} catch (error) {
+    alert(error);
+}
+</script>

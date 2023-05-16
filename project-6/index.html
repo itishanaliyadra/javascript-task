@@ -1,0 +1,49 @@
+<!-- 1. wap to javascript class and object method use program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following
+
+Percentage >= 90% : Grade A
+Percentage >= 80% : Grade B
+Percentage >= 70% : Grade C
+Percentage >= 60% : Grade D 
+Percentage >= 50% : Grade E
+Percentage >= 40% : Grade F -->
+
+
+
+<script type="text/javascript">
+    class Mark {
+        marks(){
+               let  Physics=parseInt(prompt("Entr Physics marks  ="));
+               let  Chemistry=parseInt(prompt("Entr Chemistry marks ="));
+               let  Biology=parseInt(prompt("Entr Biology marks ="));
+               let  Mathematics =parseInt(prompt("Entr Mathematics marks ="));
+               let  Computer =parseInt(prompt("Entr Computer marks ="));
+               let totle = Physics+Chemistry+Biology+Mathematics+Computer;
+               let evg=totle/5;
+
+
+               if(evg>=90){
+                document.write("<h1>Grade A</h1>");
+               }
+               else if(evg>=80){
+                document.write("<h1>Grade B</h1>");
+               }
+               else if(evg>=70){
+                document.write("<h1>Grade C</h1>");
+               }
+               else if(evg>=60){
+                document.write("<h1>Grade D</h1>");
+               }
+               else if(evg>=50){
+                document.write("<h1>Grade E</h1>");
+               }
+               else{
+                document.write("<h1>Grade F</h1>");
+               }
+
+        }
+    }
+
+
+    let newobj = new Mark;
+    newobj.marks();
+</script>

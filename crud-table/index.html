@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  
+  <h1>crud operations </h1>
+
+<hr>
+  <form>
+    <input type="hidden" id="id">
+    <table border="1" cellspacing="0" cellpadding="15">
+        <tr>
+            <td>Name :-</td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td>Email :-</td>
+            <td><input type="text" id="email"></td>
+        </tr>
+        <tr>
+            <td>phone :-</td>
+            <td><input type="text" id="phone"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+              <input type="button" id="submit" onclick="submitdata()" value="Submit">
+              <input type="button" id="upadatebtn" onclick="datasave()" value="Updated">
+            </td>
+        </tr>
+
+    </table>
+</form>
+
+<br>
+<hr>
+<br>
+<br>
+  <table border="1" id="showtable"></table>
+  
+    
+
+
+
+
+
+  <script src="js/crud.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<br>
+<button onclick="color()" id="btn">change Them</button>
+<script type="text/javascript">
+    document.getElementById('btn').style.padding = "8px 10px";
+    document.getElementById('btn').style.margin = "10px 0";
+    let box = document.getElementsByTagName('div');
+    for (let i in box) {
+        box[i].style.display = "inline-block";
+        box[i].style.border = "1px solid";
+        box[i].style.margin = "20px";
+        box[i].style.width = "200px";
+        box[i].style.height = "200px";
+    }
+    function color() {
+        for (let k in box) {
+            box[0].style.backgroundColor = "blue";
+            box[1].style.backgroundColor = "#000";
+            box[2].style.backgroundColor = "yellow";
+            box[3].style.backgroundColor = "green";
+            box[4].style.backgroundColor = "pink";
+            box[5].style.backgroundColor = "red";
+            box[k].style.boxShadow="4px 4px 10px #000";
+            document.getElementById('btn').style.backgroundColor = "#000";
+            document.getElementById('btn').style.color = "#ffff";
+        }
+    }
+</script>

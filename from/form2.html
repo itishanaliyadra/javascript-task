@@ -1,0 +1,85 @@
+<form>
+    <table border="1" cellspacing="0" cellpadding="10" style="margin: auto;">
+        <tr>
+            <td>NAME :- </td>
+            <td> <input type="text" id="name" style="padding: 8px 10px;"></td>
+        </tr>
+        <tr>
+            <td>EMAIL :- </td>
+            <td> <input type="email" id="email" style="padding: 8px 10px;"></td>
+        </tr>
+        <tr>
+            <td>PHONE :- </td>
+            <td><input type="number" id="phone" style="padding: 8px 10px;"></td>
+        </tr>
+        <tr></tr>
+        <td colspan="2"><input type="button" value="submit" style="width: 100%; padding: 8px 10px;"
+                onclick="save()"></td>
+        </tr>
+    </table>
+
+
+</form>
+<table border="1" cellspacing="0" cellpadding="20" id="show" style="margin: auto;"></table>
+<script type="text/javascript">
+
+
+    let record = [];
+
+    let viewdata = () => {
+        let tbl = "";
+        tbl += `
+                        <tr>
+                            <td>Name</td>
+                            <td>Email</td>
+                            <td>Phone</td>
+                        </tr>
+                    `
+        record.map((val) => {
+            return tbl += `
+                            <tr>
+                                <td>${val.name}</td>
+                                <td>${val.email}</td>
+                                <td>${val.phone}</td>
+                            </tr>
+                        `
+
+        })
+
+
+        document.getElementById('show').innerHTML = tbl;
+
+    }
+    viewdata();
+
+    let save = () => {
+        let n = document.getElementById('name').value;
+        let e = document.getElementById('email').value;
+        let p = document.getElementById('phone').value;
+        let check = 0;
+        for (let i in record) {
+            if (record[i].email == e) {
+                check = 1;
+            }
+        }
+
+        if (check == 1) {
+            alert("User duplicate");
+        }
+        else {
+            let obj = {
+                name: n,
+                email: e,
+                phone: p
+            }
+            record.push(obj);
+            alert("record successfully add");
+            viewdata();
+        }
+        document.getElementById('name').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('phone').value = "";
+
+    }
+
+</script>

@@ -1,0 +1,26 @@
+<div id="parent">
+    <button id="btn">Send</button>
+</div>
+
+
+
+<script type="text/javascript">
+    let img = document.createElement('img');
+    let div = document.createElement('div');
+    let btn = document.getElementById('btn');
+    img.style.backgroundImage = "url('pexels-tom-fisk-11553082.jpg')";
+    img.style.backgroundSize = "cover";
+    img.style.width = "100%";
+    img.style.height = "100vh";
+    btn.style.padding = "8px 10px";
+    btn.addEventListener('click', () => {
+        btn.style.color = "#00000";
+        btn.style.backgroundColor = "#7777";
+        btn.style.border = "none";
+        img.style.backgroundImage = "url('pexels-pixabay-66284.jpg')";
+        img.style.backgroundPosition="center";
+
+    });
+    document.getElementById("parent").appendChild(div);
+    document.getElementById("parent").appendChild(img);
+</script>
